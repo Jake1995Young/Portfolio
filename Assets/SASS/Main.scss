@@ -1,0 +1,23 @@
+/*
+    This is the main CSS file which will retrieve the other SCSS files and convert them into one CSS
+*/
+@import "Abstracts/Mixins";
+
+@import "Base/Colours";
+@import "Base/Base";
+
+@import "Components/Nav";
+@import "Components/Arrow";
+@import "Components/BubblyButton";
+
+@import "Sections/MainSection";
+@import "Sections/AboutSection";
+@import "Sections/PortfolioSection";
+@import "Sections/ContactSection";
+
+/*Responsive Web Design*/
+@import "RWD/1800";
+@import "RWD/1300";
+
+
+

@@ -1,0 +1,66 @@
+/*
+    Base Page for CSS which will give some standard style for the whole site
+*/
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    /*Allow for smooth scrolling from one section to another*/
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+
+/*Fonts*/
+@font-face {
+    font-family: SouthernAireFont;
+    src: url(/Assets/Fonts/SouthernAireFont.ttf);
+}
+
+@font-face {
+    font-family: ChampagneFont;
+    src: url(/Assets/Fonts/ChampagneFont.ttf);
+}
+
+@font-face {
+    font-family: berkshireswash-regular;
+    src: url(/Assets/Fonts/berkshireswash-regular.ttf);
+}
+
+@font-face {
+    font-family: JosefinSans-Regular;
+    src: url(/Assets/Fonts/JosefinSans-Regular.ttf);
+}
+
+@font-face {
+    font-family: Reey-Regular;
+    src: url(/Assets/Fonts/Reey-Regular.otf);
+}
+
+@font-face {
+    font-family: Quicksand-Light;
+    src: url(/Assets/Fonts/Quicksand-Light.otf);
+}
+
+@font-face {
+    font-family: Quicksand-Regular;
+    src: url(/Assets/Fonts/Quicksand-Regular.otf);
+}
+
+@font-face {
+    font-family: Quicksand-BoldItalic;
+    src: url(/Assets/Fonts/Quicksand-BoldItalic.otf);
+}
+
+@font-face {
+    font-family: Quicksand-Bold;
+    src: url(/Assets/Fonts/Quicksand-Bold.otf);
+}
+
+
+

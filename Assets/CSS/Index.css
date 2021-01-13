@@ -1,0 +1,696 @@
+/*
+    This is the main CSS file which will retrieve the other SCSS files and convert them into one CSS
+*/
+/*Center any object to the the center of the page*/
+/*Colours*/
+/*
+    Base Page for CSS which will give some standard style for the whole site
+*/
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
+html {
+  /*Allow for smooth scrolling from one section to another*/
+  scroll-behavior: smooth;
+  box-sizing: border-box;
+  font-size: 62.5%; }
+
+/*Fonts*/
+@font-face {
+  font-family: SouthernAireFont;
+  src: url(/Assets/Fonts/SouthernAireFont.ttf); }
+
+@font-face {
+  font-family: ChampagneFont;
+  src: url(/Assets/Fonts/ChampagneFont.ttf); }
+
+@font-face {
+  font-family: berkshireswash-regular;
+  src: url(/Assets/Fonts/berkshireswash-regular.ttf); }
+
+@font-face {
+  font-family: JosefinSans-Regular;
+  src: url(/Assets/Fonts/JosefinSans-Regular.ttf); }
+
+@font-face {
+  font-family: Reey-Regular;
+  src: url(/Assets/Fonts/Reey-Regular.otf); }
+
+@font-face {
+  font-family: Quicksand-Light;
+  src: url(/Assets/Fonts/Quicksand-Light.otf); }
+
+@font-face {
+  font-family: Quicksand-Regular;
+  src: url(/Assets/Fonts/Quicksand-Regular.otf); }
+
+@font-face {
+  font-family: Quicksand-BoldItalic;
+  src: url(/Assets/Fonts/Quicksand-BoldItalic.otf); }
+
+@font-face {
+  font-family: Quicksand-Bold;
+  src: url(/Assets/Fonts/Quicksand-Bold.otf); }
+
+/*Main Section Nav Bar*/
+.NavSection {
+  position: fixed;
+  width: 100%;
+  height: 6%;
+  background-color: #84a59d;
+  z-index: 10; }
+  .NavSection nav {
+    position: fixed;
+    background-color: #f28482;
+    top: 1%;
+    right: 0%;
+    float: right;
+    width: 35%;
+    height: 4%;
+    font-family: "Quicksand-Regular";
+    font-weight: 500;
+    /*Curving the left side of Nav*/
+    border-bottom-left-radius: 50px;
+    border-top-left-radius: 50px; }
+    .NavSection nav .NavList {
+      display: flex;
+      position: absolute;
+      top: 50%;
+      list-style: none;
+      margin-left: 2vh; }
+      .NavSection nav .NavList a {
+        text-decoration: none;
+        color: #3f554f;
+        line-height: 10%;
+        font-size: 3vh;
+        padding-right: 3vh;
+        text-transform: uppercase; }
+      .NavSection nav .NavList a:hover {
+        color: #f7ede2; }
+
+.DownArrowContainer {
+  position: absolute;
+  top: 85%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 5; }
+
+.DownArrowCircle {
+  position: relative;
+  border: 3px solid #f28482;
+  width: 10vh;
+  height: 10vh;
+  border-radius: 100%; }
+
+span {
+  position: absolute;
+  z-index: 999;
+  height: .5vh;
+  margin: 1px;
+  /*Length of arrow line*/
+  width: 3.1vh;
+  background: #3f554f;
+  transition: 0.4s ease;
+  display: block; }
+
+/*The angles for each span of line*/
+span:first-child {
+  left: 25%;
+  bottom: 35%;
+  transform: rotate(45deg); }
+
+span:nth-child(2) {
+  left: 45%;
+  bottom: 35%;
+  transform: rotate(-45deg); }
+
+span:nth-child(3) {
+  left: 25%;
+  bottom: 54%;
+  transform: rotate(45deg); }
+
+span:nth-child(4) {
+  left: 45%;
+  bottom: 54%;
+  transform: rotate(-45deg); }
+
+/*Change the arrow colour on hover*/
+.DownArrowCircle:hover span {
+  background: #f28482; }
+
+/*The rotations on hover*/
+.DownArrowCircle:hover span:nth-child(1) {
+  transform: rotate(-135deg); }
+
+.DownArrowCircle:hover span:nth-child(2) {
+  transform: rotate(135deg); }
+
+.DownArrowCircle:hover span:nth-child(3) {
+  transform: rotate(225deg); }
+
+.DownArrowCircle:hover span:nth-child(4) {
+  transform: rotate(-225deg); }
+
+.bubbly-button {
+  opacity: 0;
+  display: inline-block;
+  font-size: 1em;
+  padding: 1em 2em;
+  top: 20%;
+  left: 50%;
+  transform: translateX(-50%);
+  position: absolute;
+  -webkit-appearance: none;
+  appearance: none;
+  background-color: #3f554f;
+  color: #f7ede2;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  position: relative;
+  transition: transform ease-in 0.1s, box-shadow ease-in 0.25s;
+  box-shadow: 0 2px 25px rgba(63, 85, 79, 0.5); }
+  .bubbly-button a {
+    text-decoration: none;
+    color: #f7ede2; }
+
+.bubbly-button:focus {
+  outline: 0; }
+
+.bubbly-button:before,
+.bubbly-button:after {
+  position: absolute;
+  content: "";
+  display: block;
+  width: 140%;
+  height: 100%;
+  left: -20%;
+  z-index: -1000;
+  transition: all ease-in-out 0.5s;
+  background-repeat: no-repeat; }
+
+.bubbly-button:before {
+  display: none;
+  top: -75%;
+  background-image: radial-gradient(circle, #3f554f 20%, transparent 20%), radial-gradient(circle, transparent 20%, #3f554f 20%, transparent 30%), radial-gradient(circle, #3f554f 20%, transparent 20%), radial-gradient(circle, #3f554f 20%, transparent 20%), radial-gradient(circle, transparent 10%, #3f554f 15%, transparent 20%), radial-gradient(circle, #3f554f 20%, transparent 20%), radial-gradient(circle, #3f554f 20%, transparent 20%), radial-gradient(circle, #3f554f 20%, transparent 20%), radial-gradient(circle, #3f554f 20%, transparent 20%);
+  background-size: 10% 10%, 20% 20%, 15% 15%, 20% 20%, 18% 18%, 10% 10%, 15% 15%, 10% 10%, 18% 18%; }
+
+.bubbly-button:after {
+  display: none;
+  bottom: -75%;
+  background-image: radial-gradient(circle, #3f554f 20%, transparent 20%), radial-gradient(circle, #3f554f 20%, transparent 20%), radial-gradient(circle, transparent 10%, #3f554f 15%, transparent 20%), radial-gradient(circle, #3f554f 20%, transparent 20%), radial-gradient(circle, #3f554f 20%, transparent 20%), radial-gradient(circle, #3f554f 20%, transparent 20%), radial-gradient(circle, #3f554f 20%, transparent 20%);
+  background-size: 15% 15%, 20% 20%, 18% 18%, 20% 20%, 15% 15%, 10% 10%, 20% 20%; }
+
+.bubbly-button:active {
+  transform: scale(0.9);
+  background-color: #3f554f;
+  box-shadow: 0 2px 25px rgba(63, 85, 79, 0.2); }
+
+.bubbly-button.animate:before {
+  display: block;
+  animation: topBubbles ease-in-out 0.75s forwards; }
+
+.bubbly-button.animate:after {
+  display: block;
+  animation: bottomBubbles ease-in-out 0.75s forwards; }
+
+@keyframes topBubbles {
+  0% {
+    background-position: 5% 90%, 10% 90%, 10% 90%, 15% 90%, 25% 90%, 25% 90%, 40% 90%, 55% 90%, 70% 90%; }
+  50% {
+    background-position: 0% 80%, 0% 20%, 10% 40%, 20% 0%, 30% 30%, 22% 50%, 50% 50%, 65% 20%, 90% 30%; }
+  100% {
+    background-position: 0% 70%, 0% 10%, 10% 30%, 20% -10%, 30% 20%, 22% 40%, 50% 40%, 65% 10%, 90% 20%;
+    background-size: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%; } }
+
+@keyframes bottomBubbles {
+  0% {
+    background-position: 10% -10%, 30% 10%, 55% -10%, 70% -10%, 85% -10%, 70% -10%, 70% 0%; }
+  50% {
+    background-position: 0% 80%, 20% 80%, 45% 60%, 60% 100%, 75% 70%, 95% 60%, 105% 0%; }
+  100% {
+    background-position: 0% 90%, 20% 90%, 45% 70%, 60% 110%, 75% 80%, 95% 70%, 110% 10%;
+    background-size: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%; } }
+
+/*This is the main section*/
+.MainSection {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  background: linear-gradient(to bottom, #f7ede2 70%, #84a59d 30%);
+  /*On hover change the polaroids back to 0deg*/ }
+  .MainSection .Logo {
+    position: absolute;
+    left: 00%;
+    top: -4%;
+    z-index: 11; }
+  .MainSection .Slogan {
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-weight: 600;
+    color: #3f554f;
+    font-family: "Quicksand-Light";
+    font-size: 4vh;
+    text-align: center; }
+  .MainSection svg {
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    font-size: 8vh;
+    transform: translateX(-50%);
+    font-weight: 600;
+    width: 100%;
+    height: 150%;
+    margin: 0 auto;
+    letter-spacing: 4px; }
+  .MainSection .TextColour {
+    fill: none;
+    stroke: white;
+    stroke-dasharray: 8% 29%;
+    stroke-width: .2vh;
+    stroke-dashoffset: 0%;
+    animation: stroke-offset 5.5s infinite linear; }
+  .MainSection .TextColour:nth-child(1) {
+    stroke: #f28482;
+    animation-delay: -1; }
+  .MainSection .TextColour:nth-child(2) {
+    stroke: #3f554f;
+    animation-delay: -2s; }
+  .MainSection .TextColour:nth-child(3) {
+    stroke: #84a59d;
+    animation-delay: -3s; }
+  .MainSection .TextColour:nth-child(4) {
+    stroke: #f5cac3;
+    animation-delay: -4s; }
+  .MainSection .TextColour:nth-child(5) {
+    stroke: #f6bd60;
+    animation-delay: -5s; }
+
+@keyframes stroke-offset {
+  100% {
+    stroke-dashoffset: -35%; } }
+  .MainSection .PolaroidGallery {
+    position: absolute;
+    top: 73%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    /*Setting the z-index to allow it to cover the down arrow*/
+    z-index: 1; }
+    .MainSection .PolaroidGallery a {
+      position: relative;
+      /*This padding surrounds the photos to give a polaroid affect*/
+      padding: 10px 10px 25px;
+      text-align: center;
+      text-decoration: none;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+      transition: all .15s linear;
+      z-index: 1;
+      background: white;
+      float: left;
+      margin: 0 15px 30px;
+      -webkit-box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+      -moz-box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+      -webkit-transition: all .15s linear;
+      -moz-transition: all .15s linear; }
+  .MainSection .PolaroidGallery a:after {
+    position: relative;
+    top: 15px;
+    color: #3f554f;
+    font-size: 6vh;
+    /*Adds the title to the bottom of the polaroid*/
+    content: attr(title);
+    font-family: "Reey-Regular"; }
+  .MainSection .PolaroidGallery img {
+    /*Display as block as without it wont allign correctly in the polaroid*/
+    display: block;
+    width: inherit; }
+  .MainSection .PolaroidGallery a:nth-child(n) {
+    transform: rotate(-10deg);
+    -webkit-transform: rotate(-10deg);
+    -moz-transform: rotate(-10deg); }
+  .MainSection .PolaroidGallery a:nth-child(2n) {
+    top: -20%;
+    transform: rotate(10deg);
+    -webkit-transform: rotate(10deg);
+    -moz-transform: rotate(10deg); }
+  .MainSection .PolaroidGallery a:nth-child(3n) {
+    transform: rotate(-24deg);
+    -webkit-transform: rotate(-24deg);
+    -moz-transform: rotate(-24deg); }
+  .MainSection .PolaroidGallery a:nth-child(4n) {
+    top: 10%;
+    transform: rotate(14deg);
+    -webkit-transform: rotate(14deg);
+    -moz-transform: rotate(14deg); }
+  .MainSection .PolaroidGallery a:nth-child(5n) {
+    transform: rotate(-18deg);
+    -webkit-transform: rotate(-18deg);
+    -moz-transform: rotate(-18deg); }
+  .MainSection .PolaroidGallery a:nth-child(6n) {
+    top: 10%;
+    transform: rotate(10deg);
+    -webkit-transform: rotate(10deg);
+    -moz-transform: rotate(10deg); }
+  .MainSection .PolaroidGallery a:hover {
+    transform: rotate(0deg);
+    transform: scale(1.2);
+    z-index: 2;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.7);
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -webkit-transform: scale(1.2);
+    -moz-transform: scale(1.2);
+    -webkit-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.7);
+    -moz-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.7); }
+
+/*This is the about section*/
+.AboutSection {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  position: relative;
+  background-color: #f7ede2; }
+  .AboutSection .Commentary {
+    position: absolute;
+    top: 25%;
+    left: 5%;
+    width: 45%;
+    height: 60%;
+    z-index: 1;
+    background-color: #f7ede2; }
+    .AboutSection .Commentary .Quote {
+      position: absolute;
+      height: 50%;
+      width: 90%;
+      margin: 5%;
+      font-size: 2.5vh;
+      text-align: left;
+      font-weight: 800;
+      font-family: "Quicksand-BoldItalic"; }
+    .AboutSection .Commentary .SmallQuote {
+      position: absolute;
+      top: 53%;
+      height: 20%;
+      width: 90%;
+      margin: 5%;
+      font-size: 2.2vh;
+      text-align: left;
+      font-weight: bolder;
+      font-family: "Quicksand-light"; }
+    .AboutSection .Commentary .Signature {
+      position: absolute;
+      top: 90%;
+      left: 14%;
+      transform: translateX(-50%);
+      height: 25%;
+      width: 40%; }
+  .AboutSection .JakeBGPhoto {
+    position: absolute;
+    top: 15%;
+    left: 40%;
+    width: 50%;
+    height: 80%; }
+  .AboutSection .AboutMe {
+    position: absolute;
+    left: 85%;
+    top: 50%;
+    font-weight: 800;
+    font-family: "Quicksand-BoldItalic";
+    font-size: 2.5vh;
+    transform: rotate(90deg); }
+
+/*This is the about section*/
+.PortfolioSection {
+  position: relative;
+  height: 200vh;
+  width: 100%;
+  font-family: "Quicksand-Bold";
+  /*Overlapping the image with a two tone gradient (grey->yellow)*/
+  background-image: linear-gradient(to right bottom, rgba(245, 202, 195, 0.3), rgba(126, 213, 111, 0.2));
+  background-size: cover;
+  padding: 8% 3% 0% 12%;
+  /*Grid template*/
+  display: grid;
+  grid-template-columns: 40% 40%;
+  grid-template-rows: 25% 25% 25%;
+  grid-gap: 10%;
+  /*Animating the text appearing on the website cards*/
+  /*Dots*/
+  /*Dot movements*/ }
+  .PortfolioSection .WebsiteTile {
+    position: relative;
+    background-color: #f6bd60;
+    display: inline-block;
+    background-size: cover;
+    cursor: pointer;
+    transition: all 0.4s ease-out;
+    box-shadow: 0px 35px 77px -17px rgba(0, 0, 0, 0.44);
+    overflow: hidden;
+    color: #3f554f; }
+    .PortfolioSection .WebsiteTile:hover {
+      box-shadow: 0px 35px 77px -17px rgba(0, 0, 0, 0.64);
+      transform: scale(1.05); }
+  .PortfolioSection .WebsiteImage {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    transition: all 0.4s ease-out; }
+  .PortfolioSection .WebsiteInfo {
+    position: absolute;
+    padding: 10%;
+    height: calc(100% - 60px); }
+  .PortfolioSection .Website {
+    font-size: 4vh;
+    color: #f7ede2;
+    margin: 0;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3); }
+  .PortfolioSection .WebsiteType {
+    font-size: 3vh;
+    margin: 2vh 0 0 0;
+    transform: translateX(200px); }
+  .PortfolioSection .WebsiteDesc {
+    font-size: 2vh;
+    margin: 20px 0 0 0;
+    line-height: 150%;
+    transform: translateX(-20%);
+    transition-delay: 0.2s; }
+  .PortfolioSection .animate-text {
+    opacity: 0;
+    transition: all 0.6s ease-in-out; }
+  .PortfolioSection .WebsiteTile:hover .WebsiteImage {
+    opacity: 0.2; }
+  .PortfolioSection .WebsiteTile:hover .animate-text {
+    transform: translateX(0);
+    opacity: 1; }
+  .PortfolioSection .WebsiteTile:hover .bubbly-button {
+    opacity: 1;
+    transition: all 0.6s ease-in-out; }
+  .PortfolioSection .WebsiteTile:hover span {
+    opacity: 1;
+    transform: translateY(0px); }
+  .PortfolioSection .Dots {
+    position: absolute;
+    bottom: -10%;
+    right: 10%;
+    margin: 0 auto;
+    width: 10%;
+    height: 10%;
+    color: #84a59d;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around; }
+  .PortfolioSection .Dots span {
+    width: 15%;
+    height: 15%;
+    background-color: #84a59d;
+    border-radius: 50%;
+    display: block;
+    opacity: 0;
+    transition: transform 0.4s ease-out, opacity 0.5s ease;
+    transform: translateY(30px); }
+  .PortfolioSection .Dots span:nth-child(1) {
+    transition-delay: 0.05s; }
+  .PortfolioSection .Dots span:nth-child(2) {
+    transition-delay: 0.1s; }
+  .PortfolioSection .Dots span:nth-child(3) {
+    transition-delay: 0.15s; }
+
+.ContactSection {
+  position: absolute;
+  width: 100%;
+  height: 35%;
+  background-color: rgba(132, 165, 157, 0.6); }
+  .ContactSection .ContactInfo {
+    position: absolute;
+    left: 55%;
+    top: 10%;
+    width: 40%;
+    height: 80%;
+    font-family: "Quicksand-Regular";
+    color: #3f554f; }
+    .ContactSection .ContactInfo h1 {
+      font-family: "Quicksand-Bold";
+      font-size: 4vh;
+      padding-bottom: 1%; }
+    .ContactSection .ContactInfo h2 {
+      font-size: 3vh;
+      padding-bottom: 5%; }
+    .ContactSection .ContactInfo h3 {
+      font-size: 2.3vh;
+      font-family: "Quicksand-Bold"; }
+    .ContactSection .ContactInfo h4 {
+      font-size: 1.8vh;
+      padding-bottom: 3%; }
+  .ContactSection ul {
+    position: absolute;
+    top: 20%;
+    left: 80%;
+    width: auto;
+    height: 100%;
+    list-style: none; }
+  .ContactSection #RightList {
+    left: 85%; }
+  .ContactSection li {
+    margin: 2vh;
+    font-size: 4vh;
+    color: #3f554f; }
+
+#icon {
+  transform: scale(1);
+  transition: .3s; }
+  #icon:hover {
+    transform: scale(1.5);
+    transition: .3s;
+    color: #f28482; }
+
+.DiagonalLine {
+  position: absolute;
+  left: 50%;
+  top: 10%;
+  width: 10%;
+  height: 100%; }
+  .DiagonalLine:after {
+    content: "";
+    position: absolute;
+    border-top: 5px solid #3f554f;
+    width: 175%;
+    transform: rotate(125deg);
+    transform-origin: 0% 0%; }
+
+.EmailForm {
+  position: absolute;
+  left: 10%;
+  top: 10%;
+  width: 25%;
+  height: 80%;
+  font-family: "Quicksand-Regular";
+  color: #3f554f; }
+  .EmailForm h1 {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: "Quicksand-Bold";
+    font-size: 4vh;
+    padding-bottom: 5%; }
+  .EmailForm label {
+    font-size: 2.3vh;
+    font-family: "Quicksand-Bold"; }
+  .EmailForm input {
+    font-size: 1.8vh;
+    padding-bottom: 3%; }
+  .EmailForm .Name {
+    position: absolute;
+    top: 20%;
+    left: 5%; }
+  .EmailForm .Email {
+    position: absolute;
+    top: 20%;
+    padding-right: 5%;
+    left: 50%; }
+  .EmailForm .Message {
+    position: absolute;
+    top: 50%;
+    left: 5%; }
+    .EmailForm .Message textarea {
+      width: 260%;
+      height: 50%;
+      font-family: "Quicksand-Regular"; }
+  .EmailForm h4 {
+    position: absolute;
+    left: 45%;
+    top: 80%;
+    transform: translateX(-50%);
+    font-size: 6vh; }
+
+/*Responsive Web Design*/
+/*Responsive Web Design - Max 1800px*/
+@media only screen and (max-width: 1800px) {
+  nav {
+    top: 2.5%;
+    width: 30%; }
+    nav .NavList a {
+      font-size: 3vh; } }
+
+@media only screen and (max-width: 1500px) {
+  nav {
+    width: 35%; } }
+
+@media only screen and (max-width: 1800px) {
+  .MainSection .Slogan {
+    font-size: 3.5vh; }
+  .MainSection svg {
+    font-size: 5vh; }
+  .MainSection .PolaroidGallery {
+    left: 60%; }
+  .MainSection .PolaroidGallery img {
+    width: 17vh;
+    height: 13vh; }
+  .MainSection #Jake {
+    height: 16vh; }
+  .MainSection #Dublin {
+    width: 22vh; }
+  .MainSection #Friends {
+    width: 22vh; }
+  .MainSection #Husband {
+    width: 27vh; }
+  .MainSection #Family {
+    width: 19.5vh; } }
+
+@media only screen and (max-width: 1800px) {
+  .AboutSection .Commentary .Quote {
+    font-size: 2.3vh; }
+  .AboutSection .Commentary .SmallQuote {
+    font-size: 1.9vh;
+    top: 60%; } }
+
+/*Responsive Web Design - Max 1300px*/
+@media only screen and (max-width: 1300px) {
+  .MainSection .Slogan {
+    font-size: 3vh; }
+  .MainSection .PolaroidGallery {
+    align-content: center; }
+    .MainSection .PolaroidGallery img {
+      width: 13vh;
+      height: 10vh; }
+  .MainSection #Jake {
+    height: 13vh; }
+  .MainSection #Husband {
+    width: 15.5vh; }
+  .MainSection #Family {
+    width: 15.5vh; } }
+
+@media only screen and (max-width: 1300px) {
+  .AboutSection .Commentary .Quote {
+    font-size: 2vh; }
+  .AboutSection .Commentary .SmallQuote {
+    font-size: 1.8vh; } }

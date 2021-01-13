@@ -1,0 +1,49 @@
+/*Responsive Web Design - Max 1300px*/
+.MainSection {
+
+    @media only screen and (max-width: 1300px) {
+        .Slogan {
+            font-size: 3vh;
+        }
+
+        .PolaroidGallery {
+            align-content: center;
+
+            img {
+                width: 13vh;
+                height: 10vh;
+
+            }
+        }
+
+        #Jake {
+            height: 13vh;
+        }
+
+        #Husband {
+            width: 15.5vh;
+        }
+
+        #Family {
+            width: 15.5vh;
+        } 
+    }
+}
+
+.AboutSection{
+    @media only screen and (max-width: 1300px) {
+        .Commentary {
+            .Quote{
+                font-size: 2vh;
+            }
+            .SmallQuote{
+                font-size: 1.8vh;
+            }
+            .Signature{
+                
+            }
+        }
+    
+    }
+}
+

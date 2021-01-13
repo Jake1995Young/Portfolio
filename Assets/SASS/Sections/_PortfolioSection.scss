@@ -1,0 +1,141 @@
+/*This is the about section*/
+.PortfolioSection {
+
+    position: relative;
+    height: 200vh;
+    width: 100%;
+
+    font-family: "Quicksand-Bold";
+    /*Overlapping the image with a two tone gradient (grey->yellow)*/
+    background-image: linear-gradient(to right bottom, rgba(245, 202, 195, 0.3),rgba(126, 213, 111, 0.2));
+    
+    background-size: cover;
+    padding: 8% 3% 0% 12%;
+
+    /*Grid template*/
+    display: grid;
+    grid-template-columns: 40% 40%;
+    grid-template-rows: 25% 25% 25%;
+    grid-gap: 10%;
+
+    .WebsiteTile {
+        position: relative;
+        background-color: $Mustard;
+        display: inline-block;
+        background-size: cover;
+        cursor: pointer;
+        transition: all 0.4s ease-out;
+        box-shadow: 0px 35px 77px -17px rgba(0, 0, 0, 0.44);
+        overflow: hidden;
+        color: $Dark-Green;
+
+        &:hover {
+            box-shadow: 0px 35px 77px -17px rgba(0, 0, 0, 0.64);
+            transform: scale(1.05);
+        }
+    }
+
+    .WebsiteImage {
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        height: 100%;
+        width: 100%;
+        transition: all 0.4s ease-out;
+    }
+
+    .WebsiteInfo {
+        position: absolute;
+        padding: 10%;
+        height: calc(100% - 60px);
+    }
+
+    .Website {
+        font-size: 4vh;
+        color: $Cream;
+        margin: 0;
+        text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+    }
+
+    .WebsiteType {
+        font-size: 3vh;
+        margin: 2vh 0 0 0;
+        transform: translateX(200px);
+    }
+
+    .WebsiteDesc {
+        font-size: 2vh;
+        margin: 20px 0 0 0;
+        line-height: 150%;
+        transform: translateX(-20%);
+        transition-delay: 0.2s;
+    }
+
+    /*Animating the text appearing on the website cards*/
+    .animate-text {
+        opacity: 0;
+        transition: all 0.6s ease-in-out;
+    }
+
+
+    .WebsiteTile:hover .WebsiteImage {
+        opacity: 0.2;
+    }
+
+    .WebsiteTile:hover .animate-text {
+        transform: translateX(0);
+        opacity: 1;
+    }
+
+    .WebsiteTile:hover .bubbly-button {
+        opacity: 1;
+        transition: all 0.6s ease-in-out;
+    }
+
+    /*Dots*/
+    .WebsiteTile:hover span {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+
+    .Dots {
+        position: absolute;
+        bottom: -10%;
+        right: 10%;
+
+        margin: 0 auto;
+        width: 10%;
+        height: 10%;
+        color: $Teal;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    .Dots span {
+        width: 15%;
+        height: 15%;
+
+        background-color: $Teal;
+        border-radius: 50%;
+        display: block;
+        opacity: 0;
+        transition: transform 0.4s ease-out, opacity 0.5s ease;
+        transform: translateY(30px);
+    }
+
+    /*Dot movements*/
+    .Dots span:nth-child(1) {
+        transition-delay: 0.05s;
+    }
+
+    .Dots span:nth-child(2) {
+        transition-delay: 0.1s;
+    }
+
+    .Dots span:nth-child(3) {
+        transition-delay: 0.15s;
+    }
+}
