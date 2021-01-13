@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!--Used for responsive design, changing format of html on different screen sizes -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Portfolio</title>
+
+    <!--set the html address icon-->
+    <link rel="icon" href="Assets/Icons/ionicons-v2.0.1-master/png/512/ios7-monitor.png" alt="Portfolio Icon">
+
+    <!--Links to icons frequently used and also the main CSS file-->
+    <link rel="stylesheet" type="text/css" href="Assets/CSS/index.css">
+    <link rel="stylesheet" type="text/css" href="Assets/Icons/ionicons-v2.0.1-master/css/ionicons.min.css">
+</head>
+
+<body>
+    <section class="MainSection" id="MainSection">
+
+        <img class="Logo" src="/Assets/Images/Logo.png" alt="Jake Young Designs Logo">
+
+        <!--Main Nav-->
+        <section class="NavSection">
+            <nav class="Nav">
+                <ul class="NavList">
+                    <li class="Home"><a href="#MainSection">Home</a></li>
+                    <li class="About"><a href="#AboutSection">About</a></li>
+                    <li class="Portfolio"><a href="#PortfolioSection">Portfolio</a></li>
+                    <li class="Contact"><a href="#ContactSection">Contact</a></li>
+                </ul>
+            </nav>
+        </section>
+        <div class="SectionContainer">
+
+            <p class="Slogan">
+                Working towards building a tasteful and fun <br>
+                web design portfolio<br>
+                through helping small business' show off their work
+            </p>
+
+            <!--Let's design Title-->
+            <svg>
+                <symbol id="SVGText">
+                    <text text-anchor="middle" x="50%" y="20%">Let's Design</text>
+                </symbol>
+                <g>
+                    <use xlink:href="#SVGText" class="TextColour"></use>
+                    <use xlink:href="#SVGText" class="TextColour"></use>
+                    <use xlink:href="#SVGText" class="TextColour"></use>
+                    <use xlink:href="#SVGText" class="TextColour"></use>
+                    <use xlink:href="#SVGText" class="TextColour"></use>
+                </g>
+            </svg>
+
+            <!--Polaroid Gallery-->
+            <div class="PolaroidGallery">
+                <a href="" title="Dublin">
+                    <img id="Dublin" height="150" src="/Assets/Images/Dublin.jpg" alt="Dublin" />
+                </a>
+
+                <a href="" title="Me">
+                    <img id="Jake" width="150" height="300" src="/Assets/Images/Jake.jpg" alt="Jake" />
+                </a>
+                <a href="" title="Friends">
+                    <img id="Friends" height="200" src="/Assets/Images/Jake&Rafa&Talita.jpg" alt="Jake&Rafa&Talita" />
+                </a>
+                <a href="" title="Husband">
+                    <img id="Husband" height="150" src="/Assets/Images/Jake&Rafa.jpg" alt="Jake&Rafa" />
+                </a>
+
+                <a href="" title="Family">
+                    <img id="Family" height="225" src="/Assets/Images/Family.jpg" alt="Family" />
+                </a>
+            </div>
+
+            <!--Down Arrow-->
+            <div class="DownArrowContainer">
+                <!--transform the button into clickable-->
+                <a href="#AboutSection">
+                    <div class="DownArrowCircle">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+    <section class="AboutSection" id="AboutSection">
+        <div class="SectionContainer">
+            <div class="Commentary">
+                <p class="Quote">Hi I’m Jake.<br>Thanks for checking out my new site.
+                    I’m a freelance frontend web designer, focusing on UX and UI.
+                    <br>I like to develop website’s using the least amount of JavaScript as possible, instead I incorporate many different CSS models and designs. <br>I believe with the use of layers, textures and animations, any website can be completely transformed into an excellent website.
+                    <br>I work mainly with small start-up business in who need an inspiring website to showcase their work.
+                </p>
+                <p class="SmallQuote">Little bit about me, I’m 25 with a BSc in Computer Science (International).<br>
+                    I’m currently working full-time as a Technical Analyst for Dell.<br>I'm also in college part-time, studying Brazilian Portuguese, and completing a second Batchelors degree in Digital Transformation through TUD.<br>
+                    I like to keep myself busy as much as possible. When not working or studying I like to plan trips to new and exciting countries I’ve yet to travel to.
+                </p>
+                <img src="/Assets/Images/JakeSignature.png" alt="Jake's Signature" class="Signature">
+            </div>
+
+            <img src="/Assets/Images/AboutMePhoto.jpg" alt="Photo of Jake" class="JakeBGPhoto" id="Test">
+
+            <h1 class="AboutMe">A Little Info About Me</h1>
+        </div>
+    </section>
+    <section class="PortfolioSection" id="PortfolioSection">
+        <div class="WebsiteTile">
+            <img class="WebsiteImage" src="/Assets/Images/Natours.PNG" />
+            <div class="WebsiteInfo">
+                <h1 class="Website">Natours</h1>
+                <h2 class="WebsiteType animate-text">Traveling Through Nature</h2>
+                <p class="WebsiteDesc animate-text">Natours is a traveling website which offers custom packages for people who enjoy the great outdoors and would love to try some new adventures</p>
+
+                <button class="bubbly-button" href=""><a href="/Sites/Natours/index.html" class="">Click me!</a></button>
+                <div class="Dots">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="WebsiteTile">
+            <img class="WebsiteImage" src="/Assets/Images/Omnifood.PNG" />
+            <div class="WebsiteInfo">
+                <h1 class="Website">Omnifood</h1>
+                <h2 class="WebsiteType animate-text">Food Delivery Company</h2>
+                <p class="WebsiteDesc animate-text">Omnifood is an upscale food delivery company. They only cook with the freshest and most locally sourced ingredients, resulting in mouth watering meals</p>
+                <button class="bubbly-button" href=""><a href="/Sites/Omnifood/index.html" class="">Click me!</a></button>
+                <div class="Dots">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+
+        <div class="WebsiteTile">
+            <img class="WebsiteImage" src="/Assets/Images/Cuppiccino.PNG" />
+            <div class="WebsiteInfo">
+                <h1 class="Website">Cuppiccino</h1>
+                <h2 class="WebsiteType animate-text">Small Town Cafe</h2>
+                <p class="WebsiteDesc animate-text">Cuppiccino is a small town cafe which offers award winning coffee and beans which have been brewed in-house. The aroma of the cafe transports you to the Amazonian jungle</p>
+                <button class="bubbly-button" href=""><a href="/Sites/Cuppiccino/index.html" class="">Click me!</a></button>
+                <div class="Dots">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+
+        <div class="WebsiteTile">
+            <img class="WebsiteImage" src="Assets/Images/Dishy.PNG" />
+            <div class="WebsiteInfo">
+                <h1 class="Website">Dishy</h1>
+                <h2 class="WebsiteType animate-text">Michelin Star Restaurant</h2>
+                <p class="WebsiteDesc animate-text">Dishy is a Michelin Star awards eatery which provides revolutionized meals in an upscale and contemporary setting</p>
+                <button class="bubbly-button" href=""><a href="/Sites/Dishy/index.html" class="">Click me!</a></button>
+                <div class="Dots">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+
+        <div class="WebsiteTile">
+            <img class="WebsiteImage" src="/Assets/Images/Pizzeroni.PNG" />
+            <div class="WebsiteInfo">
+                <h1 class="Website">Pizzeroni</h1>
+                <h2 class="WebsiteType animate-text">Pizza Takeaway</h2>
+                <p class="WebsiteDesc animate-text">Pizzeroni is a takeaway pizza company which specializes in thick based pepperoni topped pizza. They have exploded in popularity in the last 10 months, bringing top quality pizza straight to your door</p>
+                <button class="bubbly-button" href=""><a href="/Sites/Pizzeroni/index.html" class="">Click me!</a></button>
+                <div class="Dots">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+
+        <div class="WebsiteTile">
+            <img class="WebsiteImage" src="/Assets/Images/ComingSoon.jpg" />
+            <div class="WebsiteInfo">
+                <h1 class="Website">New Site</h1>
+                <h2 class="WebsiteType animate-text">Coming Soon</h2>
+                <p class="WebsiteDesc animate-text">Watch this space. We are currently in the process of developing a new and exciting website for a well known company.</p>
+                <button class="bubbly-button" href=""><a href="https://www.github.com/Jake1995young" class="">Click me!</a></button>
+                <div class="Dots">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="ContactSection" id="ContactSection">
+        <div class="ContactInfo">
+            <h1 class="Name">Jake Young</h1>
+            <h2 class="Job">Frontend Web Developer</h2>
+            <h3 class="Phone">Phone:</h3>
+            <h4 class="PhoneNumber">0852028281</h4>
+            <h3 class="Email">Email:</h3>
+            <h4 class="EmailAddress">Jake1995young@gmail.com</h4>
+        </div>
+
+        <ul class="Socials">
+            <li id="icon" class="ion-android-mail" href="mailto:Jake1995young@gmail.com"> </li>
+            <li id="icon" class="ion-social-facebook" href="https://www.facebook.com/Jake1995y"></li>
+            <li id="icon" class="ion-social-linkedin" href="https://www.linkedin.com/in/jake-young-34574110a/"></li>
+        </ul>
+        <ul id="RightList">
+            <li id="icon" class="ion-social-instagram" href="https://www.instagram.com/jake1995young/"></li>
+            <li id="icon" class="ion-social-github" href="https://github.com/Jake1995Young/"></li>
+            <li id="icon" class="ion-social-snapchat" href="https://www.snapchat.com/"></li>
+        </ul>
+
+        <div class="DiagonalLine"></div>
+        <form class="EmailForm">
+            <h1 class="FormName TitleTop">Write To Me</h1>
+            <br>
+
+            <div class="Name">
+                <label for="Name">
+                    <i class="Name"></i>Your Name<br>
+                </label>
+                <input name="Name" class="Input" type="text" placeholder="e.g. John Doe" required>
+            </div>
+
+            <div class="Email">
+                <label for="Email">
+                    <i class="Email"></i>Your Email<br>
+                </label>
+                <input name="Email" class="Input" type="text" placeholder="email@domain.com" required>
+            </div>
+
+            <div class="Message"><label for="Message">
+                    <i class="Message"></i>Your Message<br>
+                </label>
+                <textarea name="Message" class=" Input MessageInput" placeholder="Type Here" required></textarea>
+            </div>
+
+            <h4 id="icon" class="ion-android-arrow-forward" href="#MainSection"></h4>
+
+
+        </form>
+    </section>
+    <script>
+        /*JS for the bubbly button animation*/
+        var animateButton = function(e) {
+
+            e.preventDefault;
+            //reset animation
+            e.target.classList.remove('animate');
+
+            e.target.classList.add('animate');
+            setTimeout(function() {
+                e.target.classList.remove('animate');
+            }, 700);
+        };
+
+        var bubblyButtons = document.getElementsByClassName("bubbly-button");
+
+        for (var i = 0; i < bubblyButtons.length; i++) {
+            bubblyButtons[i].addEventListener('click', animateButton, false);
+        }
+
+    </script>
+
+</body>
+
+</html>
