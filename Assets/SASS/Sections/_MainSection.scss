@@ -1,0 +1,194 @@
+/*This is the main section*/
+
+.MainSection {
+
+    @include PageSize;
+    background: linear-gradient(to bottom, $Cream 70%, $Teal 30%);
+ 
+    .Logo {
+        position: absolute;
+        left: 00%;
+        top: -4%;
+        z-index: 11;
+    }
+
+
+    .Slogan {
+        position: absolute;
+        top: 25%;
+        left: 50%;
+
+        transform: translate(-50%, -50%);
+        font-weight: 600;
+        color: $Dark-Green;
+        font-family: "Quicksand-Light";
+        font-size: 4vh;
+        text-align: center;
+    }
+
+    svg {
+        position: absolute;
+        top: 10%;
+        left: 50%;
+
+        font-size: 8vh;
+        transform: translateX(-50%);
+        font-weight: 600;
+        width: 100%;
+        height: 150%;
+        margin: 0 auto;
+        letter-spacing: 4px;
+    }
+
+    .TextColour {
+        fill: none;
+        stroke: white;
+        stroke-dasharray: 8% 29%;
+        stroke-width: .2vh;
+        stroke-dashoffset: 0%;
+        animation: stroke-offset 5.5s infinite linear;
+    }
+
+    .TextColour:nth-child(1) {
+        stroke: $Blush;
+        animation-delay: -1;
+    }
+
+    .TextColour:nth-child(2) {
+        stroke: $Dark-Green;
+        animation-delay: -2s;
+    }
+
+    .TextColour:nth-child(3) {
+        stroke: $Teal;
+        animation-delay: -3s;
+    }
+
+    .TextColour:nth-child(4) {
+        stroke: $Peach;
+        animation-delay: -4s;
+    }
+
+    .TextColour:nth-child(5) {
+        stroke: $Mustard;
+        animation-delay: -5s;
+    }
+
+    @keyframes stroke-offset {
+        100% {
+            stroke-dashoffset: -35%;
+        }
+    }
+
+
+    .PolaroidGallery {
+        position: absolute;
+        top: 73%;
+        left: 50%;
+
+        transform: translate(-50%, -50%);
+        width: 90%;
+        /*Setting the z-index to allow it to cover the down arrow*/
+        z-index: 1;
+
+        a {
+            position: relative;
+
+            /*This padding surrounds the photos to give a polaroid affect*/
+            padding: 10px 10px 25px;
+            text-align: center;
+            text-decoration: none;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, .3);
+            transition: all .15s linear;
+            z-index: 1;
+            background: white;
+            float: left;
+            margin: 0 15px 30px;
+
+            -webkit-box-shadow: 0 4px 6px rgba(0, 0, 0, .3);
+            -moz-box-shadow: 0 4px 6px rgba(0, 0, 0, .3);
+            -webkit-transition: all .15s linear;
+            -moz-transition: all .15s linear;
+        }
+    }
+
+    .PolaroidGallery a:after {
+        position: relative;
+        top: 15px;
+
+        color: $Dark-Green;
+        font-size: 6vh;
+        /*Adds the title to the bottom of the polaroid*/
+        content: attr(title);
+        font-family: "Reey-Regular";
+
+    }
+
+    .PolaroidGallery img {
+        /*Display as block as without it wont allign correctly in the polaroid*/
+        display: block;
+        width: inherit;
+    }
+
+    .PolaroidGallery a:nth-child(n) {
+        transform: rotate(-10deg);
+
+        -webkit-transform: rotate(-10deg);
+        -moz-transform: rotate(-10deg);
+    }
+
+
+    .PolaroidGallery a:nth-child(2n) {
+        top: -20%;
+
+        transform: rotate(10deg);
+        -webkit-transform: rotate(10deg);
+        -moz-transform: rotate(10deg);
+    }
+
+    .PolaroidGallery a:nth-child(3n) {
+        transform: rotate(-24deg);
+
+        -webkit-transform: rotate(-24deg);
+        -moz-transform: rotate(-24deg);
+    }
+
+    .PolaroidGallery a:nth-child(4n) {
+        top: 10%;
+
+        transform: rotate(14deg);
+        -webkit-transform: rotate(14deg);
+        -moz-transform: rotate(14deg);
+    }
+
+    .PolaroidGallery a:nth-child(5n) {
+        transform: rotate(-18deg);
+
+        -webkit-transform: rotate(-18deg);
+        -moz-transform: rotate(-18deg);
+    }
+
+    .PolaroidGallery a:nth-child(6n) {
+        top: 10%;
+
+        transform: rotate(10deg);
+        -webkit-transform: rotate(10deg);
+        -moz-transform: rotate(10deg);
+    }
+
+
+    /*On hover change the polaroids back to 0deg*/
+    .PolaroidGallery a:hover {
+        transform: rotate(0deg);
+        transform: scale(1.2);
+        z-index: 2;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, .7);
+
+        -webkit-transform: rotate(0deg);
+        -moz-transform: rotate(0deg);
+        -webkit-transform: scale(1.2);
+        -moz-transform: scale(1.2);
+        -webkit-box-shadow: 0 10px 20px rgba(0, 0, 0, .7);
+        -moz-box-shadow: 0 10px 20px rgba(0, 0, 0, .7);
+    }
+}

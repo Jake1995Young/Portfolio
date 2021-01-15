@@ -1,0 +1,74 @@
+/*This is the about section*/
+
+.AboutSection {
+
+    @include PageSize;
+    position: relative;
+    background-color: $Cream;
+
+    .Commentary {
+        position: absolute;
+        top: 25%;
+        left: 5%;
+        width: 45%;
+        height: 60%;
+        z-index: 1;
+        background-color: $Cream;
+
+        .Quote {
+            position: absolute;
+
+            height: 50%;
+            width: 90%;
+            margin: 5%;
+            font-size: 2.5vh;
+            text-align: left;
+            font-weight: 800;
+            font-family: "Quicksand-BoldItalic";
+        }
+
+        .SmallQuote {
+            position: absolute;
+            top: 53%;
+
+            height: 20%;
+            width: 90%;
+            margin: 5%;
+            font-size: 2.2vh;
+            text-align: left;
+            font-weight: bolder;
+            font-family: "Quicksand-light";
+        }
+
+        .Signature {
+            position: absolute;
+            top: 90%;
+            left: 14%;
+
+            transform: translateX(-50%);
+            height: 25%;
+            width: 40%;
+        }
+    }
+
+    .JakeBGPhoto {
+        position: absolute;
+        top: 15%;
+        left: 40%;
+        
+        width: 50%;
+        height: 80%;
+    }
+
+    .AboutMe {
+        position: absolute;
+        left: 85%;
+        top: 50%;
+        
+        font-weight: 800;
+        font-family: "Quicksand-BoldItalic";
+        font-size: 2.5vh;
+        transform: rotate(90deg);
+    }
+}
+

@@ -1,0 +1,81 @@
+.DownArrowContainer {
+    position: absolute;
+    top: 85%;
+    left: 50%;
+    
+    transform: translateX(-50%); 
+    z-index: 5;
+}
+
+.DownArrowCircle {
+    position: relative;
+    
+    border: 3px solid $Blush;
+    width: 10vh;
+    height: 10vh;
+    border-radius: 100%;
+}
+
+span {
+    position: absolute;
+    
+    z-index: 999;
+    height: .5vh;
+    margin: 1px;
+    /*Length of arrow line*/
+    width: 3.1vh;
+    background: $Dark-Green;
+    transition: 0.4s ease;
+    display: block;
+}
+
+/*The angles for each span of line*/
+span:first-child {
+    left: 25%;
+    bottom: 35%;
+    
+    transform: rotate(45deg);
+}
+
+span:nth-child(2) {
+    left: 45%;
+    bottom: 35%;
+    
+    transform: rotate(-45deg);
+}
+
+span:nth-child(3) {
+    left: 25%;
+    bottom: 54%;
+    
+    transform: rotate(45deg);
+}
+
+span:nth-child(4) {
+    left: 45%;
+    bottom: 54%;
+    
+    transform: rotate(-45deg);
+}
+
+/*Change the arrow colour on hover*/
+.DownArrowCircle:hover span{
+    background: $Blush;
+}
+
+/*The rotations on hover*/
+.DownArrowCircle:hover span:nth-child(1) {
+    transform: rotate(-135deg);
+}
+
+.DownArrowCircle:hover span:nth-child(2) {
+    transform: rotate(135deg);
+}
+
+.DownArrowCircle:hover span:nth-child(3) {
+    transform: rotate(225deg);
+}
+
+.DownArrowCircle:hover span:nth-child(4) {
+    transform: rotate(-225deg);
+}

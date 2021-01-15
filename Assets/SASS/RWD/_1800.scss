@@ -1,0 +1,76 @@
+/*Responsive Web Design - Max 1800px*/
+nav {
+    @media only screen and (max-width: 1800px) {
+
+        top: 2.5%;
+        width: 30%;
+
+        .NavList a {
+            font-size: 3vh;
+        }
+    }
+    
+    @media only screen and (max-width: 1500px) {
+         width: 35%;
+    }
+}
+
+.MainSection {
+
+    @media only screen and (max-width: 1800px) {
+        .Slogan {
+            font-size: 3.5vh;
+        }
+
+        svg {
+            font-size: 5vh;
+        }
+
+        .PolaroidGallery {
+            left: 60%;
+        }
+
+        .PolaroidGallery img {
+            width: 17vh;
+            height: 13vh;
+        }
+
+        #Jake {
+            height: 16vh;
+        }
+
+        #Dublin {
+            width: 22vh;
+        }
+
+        #Friends {
+            width: 22vh;
+        }
+
+        #Husband {
+            width: 27vh;
+        }
+
+        #Family {
+            width: 19.5vh;
+        }
+    }
+}
+
+.AboutSection {
+    @media only screen and (max-width: 1800px) {
+        .Commentary {
+            .Quote {
+                font-size: 2.3vh;
+            }
+
+            .SmallQuote {
+                font-size: 1.9vh;
+                top: 60%;
+            }
+
+            .Signature {}
+        }
+
+    }
+}
